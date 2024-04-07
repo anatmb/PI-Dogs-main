@@ -1,0 +1,19 @@
+ .card-list{
+    width: 85vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:7px;
+    /* background-color: black; */
+}
+
+.active{
+   
+    color:back;
+    background-color:#4BB5CB;
+}
+
+.paginado{
+    /* background-color: blueviolet; */
+    width: 100%;
+} 
