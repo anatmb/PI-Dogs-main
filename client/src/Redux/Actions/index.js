@@ -9,10 +9,12 @@ export const ORDEN_DOGS_RAZA = "ORDEN_DOGS_RAZA"
 export const  GET_DOGBYID=" GET_DOGBYID"
 export const POST_DOGS="POST_DOGS"
 
+const BASE_URL="https://pi-dogs-main-s3r2.onrender.com"
+
 
 export function getDogs() {
   return async function (dispatch) {
-    const response = await axios("http://localhost:3001/dogs");
+    const response = await axios(`${BASE_URL}/dogs`);
     // console.log("en action", response.data)
     return dispatch({
       type: "GET_DOGS",
@@ -24,7 +26,7 @@ export function getDogs() {
 export function getByName(name) {
   return async function (dispatch) {
     try {
-      const response = await axios(`http://localhost:3001/dogs/?name=${name}`);
+      const response = await axios(`${BASE_URL}/dogs/?name=${name}`);
       return dispatch({
         type: "GET_BY_NAME",
         payload: response.data
@@ -42,7 +44,7 @@ export function getByName(name) {
 export const getTemprement = () => {
   try {
     return async function (dispatch) {
-      const { data } = await axios.get("http://localhost:3001/temperamentos");
+      const { data } = await axios.get(`${BASE_URL}/temperamentos`);
       return dispatch({
         type: GET_TEMPREMENT,
         payload: data,
@@ -95,7 +97,7 @@ export const getorderDogsRaza = (order) => {
 export const getDogByID = (id) => {
   try {
     return async function (dispatch) {
-      const { data } = await axios.get(`http://localhost:3001/dogs/${id}`);
+      const { data } = await axios.get(`${BASE_URL}/dogs/${id}`);
       // console.log("estoy en action", data);
       return dispatch({
         type: GET_DOGBYID,
