@@ -8,7 +8,7 @@ import Formulario from './Componentes/Formulario/Formulario'
 import Landing from './Componentes/Landing/Landing'
 import { Route, Routes, useLocation } from 'react-router-dom'
 // import Navbar from './Componentes/NavBar/Navbar'
-import Home from './componentes/home/Home'
+import Home from './Componentes/Home/Home'
 import Acerca from './Componentes/Acerca/acerca'
 
 function App() {
