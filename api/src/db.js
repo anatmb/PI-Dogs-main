@@ -17,7 +17,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
   },
 });*/
 
-const sequelize = new Sequelize(`postgres://dogs_k17x_user:JA66V64sK3JsUniQNFmSdz1AHohIYM0O@dpg-cotqqjgcmk4c73a1frk0-a.oregon-postgres.render.com/dogs_k17x`, {
+const sequelize = new Sequelize(`postgresql://dbdeploy_u2a9_user:PAOOy8R7iW2ExW6kWe2IQth81lyiM5Bo@dpg-cqsf475umphs73cvkm8g-a.oregon-postgres.render.com/dbdeploy_u2a9`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   dialectOptions: {
